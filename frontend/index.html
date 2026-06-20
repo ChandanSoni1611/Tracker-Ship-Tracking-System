@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tracker</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <!-- Leaflet for background map -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+</head>
+<body>
+
+  <!-- Background satellite map -->
+  <div id="bg-map"></div>
+  <div class="overlay"></div>
+
+  <!-- Hero content -->
+  <div class="hero">
+    <div class="brand">
+      <span class="brand-icon">🛳️</span>
+      <span class="brand-name">Tracker</span>
+    </div>
+
+    <h1 class="hero-title">Track Ships<br/><span class="accent">Live, Worldwide</span></h1>
+    <p class="hero-sub">
+      Real-time AIS data. Satellite view. Every vessel, anywhere on Earth.
+    </p>
+
+    <a href="tracker.html" class="track-btn">
+      <span class="btn-icon">📡</span> Track Ships Now
+    </a>
+
+    <div class="stats">
+      <div class="stat"><span class="stat-num">100K+</span><span class="stat-label">Active Vessels</span></div>
+      <div class="stat"><span class="stat-num">Live</span><span class="stat-label">AIS Data Feed</span></div>
+      <div class="stat"><span class="stat-num">Global</span><span class="stat-label">Coverage</span></div>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

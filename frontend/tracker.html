@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ShipTrack — Tracker</title>
+
+  <!-- Leaflet -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+  <link rel="stylesheet" href="css/tracker.css"/>
+</head>
+<body>
+
+  <!-- ── Top Bar ── -->
+  <header class="topbar">
+    <a href="index.html" class="back-link">← Home</a>
+    <div class="brand">🛳️ Tracker <span class="live-badge">● LIVE</span></div>
+    <div class="ship-count">Ships visible: <strong id="ship-count">0</strong></div>
+  </header>
+
+  <!-- ── Main Layout ── -->
+  <div class="layout">
+
+    <!-- ── Left Panel ── -->
+    <aside class="panel">
+      <h2 class="panel-title">🔍 Find a Ship</h2>
+
+      <div class="form-group">
+        <label>Ship Name <span class="hint">(partial ok)</span></label>
+        <input id="inp-name" type="text" placeholder="e.g. EVER GIVEN" autocomplete="off"/>
+      </div>
+
+      <div class="form-group">
+        <label>MMSI Number <span class="hint">(9 digits)</span></label>
+        <input id="inp-mmsi" type="text" placeholder="e.g. 123456789" maxlength="9"/>
+      </div>
+
+      <div class="form-group">
+        <label>Region <span class="hint">(bounding box)</span></label>
+        <select id="inp-region">
+          <option value="world">🌍 Worldwide</option>
+          <option value="indian_ocean">🌊 Indian Ocean</option>
+          <option value="atlantic">🌊 Atlantic Ocean</option>
+          <option value="pacific">🌊 Pacific Ocean</option>
+          <option value="mediterranean">⚓ Mediterranean Sea</option>
+          <option value="north_sea">⚓ North Sea</option>
+          <option value="persian_gulf">⛽ Persian Gulf</option>
+          <option value="south_china_sea">🌏 South China Sea</option>
+        </select>
+      </div>
+
+      <div class="btn-row">
+        <button id="btn-track" class="btn-primary">📡 Track</button>
+        <button id="btn-stop" class="btn-danger" disabled>⛔ Stop</button>
+      </div>
+
+      <div id="status-box" class="status idle">Idle — enter details and click Track.</div>
+
+      <!-- Ship list -->
+      <div class="ship-list-header">Live Ships <span id="list-count">(0)</span></div>
+      <ul id="ship-list"></ul>
+    </aside>
+
+    <!-- ── Map ── -->
+    <div id="map"></div>
+
+  </div>
+
+  <script src="js/tracker.js"></script>
+</body>
+</html>
