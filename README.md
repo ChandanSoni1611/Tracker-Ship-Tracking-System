@@ -71,7 +71,7 @@ Project MM2/
  1. Clone Repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/ShipTrack.git
+https://github.com/ChandanSoni1611/Tracker-Ship-Tracking-System
 ```
 
 ```bash
